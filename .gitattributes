@@ -1,2 +1,20 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+#include <Servo.h>
+Servo.S1;
+int pos=0;
+void set()
+{
+    S1.attach(9);
+}
+void loop()
+{
+    for(pos=0;pos<180;pos++)
+    {
+    S1.write(pos);
+    delay(15);
+    }
+   for(pos=0;pos<180;pos--)
+    {
+    S1.write(pos);
+    delay(15);
+    } 
+}
